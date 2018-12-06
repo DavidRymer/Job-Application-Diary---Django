@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-5.5.0-web/css/all.css' %}" />
+
+</head>
+<body style="background-color: lightgray">
+
+
+<div class="container">
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-strong flex-center">
+                <div class="container">
+                    <div class="white-text text-center wow fadeInUp">
+                        <h1>Job Diary</h1>
+                        <br>
+                        <p>Enter the URL of a job you have applied for to get started. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "mr-5">
+        <form action="/search/" method="get">
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control" placeholder="Job Posting URL" aria-label="Job Posting URL" aria-describedby="basic-addon2" name = 'q'>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+{% block records %}
+{% endblock %}
+
+{#<div class="mx-lg-5">#}
+{#    <table class="table">#}
+{#        <thead class="thead-light">#}
+{#        <tr>#}
+{#            <th scope="col">#</th>#}
+{#            <th scope="col">Job Title</th>#}
+{#            <th scope="col">Company</th>#}
+{#            <th scope="col">Salary</th>#}
+{#            <th scope="col">Type</th>#}
+{#            <th scope="col">Education</th>#}
+{#            <th scope="col">More</th>#}
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        <tr>#}
+{#            <th scope="row">1</th>#}
+{#            <td>Mark</td>#}
+{#            <td>Otto</td>#}
+{#            <td>@mdo</td>#}
+{#            <td>Larry</td>#}
+{#            <td>the Bird</td>#}
+{#            <td>   <button type="button" class="btn btn-info">#}
+{#                <i class="fas fa-info-circle"></i></span>#}
+{#            </button></td>#}
+{##}
+{#        </tr>#}
+{#        <tr>#}
+{#            <th scope="row">2</th>#}
+{#            <td>Jacob</td>#}
+{#            <td>Thornton</td>#}
+{#            <td>@fat</td>#}
+{#            <td>Larry</td>#}
+{#            <td>the Bird</td>#}
+{#            <td>@twitter</td>#}
+{##}
+{#        </tr>#}
+{#        <tr>#}
+{#            <th scope="row">3</th>#}
+{#            <td>Larry</td>#}
+{#            <td>the Bird</td>#}
+{#            <td>@twitter</td>#}
+{#            <td>Larry</td>#}
+{#            <td>the Bird</td>#}
+{#            <td>@twitter</td>#}
+{##}
+{#        </tr>#}
+{##}
+{#        </tbody>#}
+{#    </table>#}
+{#</div>#}
+
+</body>
+</html>
